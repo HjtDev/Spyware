@@ -5,6 +5,11 @@ def convert_key(key) -> str:
     return str(key).replace("'", '').split('.')[-1]
 
 
+def save_time(file: str, name, extra_endline=False) -> None:
+    with open(file, 'a') as f:
+        f.write(name + str(dt.now()) + '\n' * (2 if extra_endline else 1))
+
+
 def on_press(key) -> None:
     key = convert_key(key)
     with open('Logger/LOG.txt', 'a') as file:
