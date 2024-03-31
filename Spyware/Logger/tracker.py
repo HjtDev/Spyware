@@ -1,7 +1,7 @@
 from pynput.keyboard import Listener
 
 
-def convert_key(key):
+def convert_key(key) -> str:
     return str(key).replace("'", '').split('.')[-1]
 
 
