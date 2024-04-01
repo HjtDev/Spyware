@@ -52,3 +52,5 @@ def export_passwords(path):
     export_data_from_database(get_login_data(), path)
 
 
+if __name__ == '__main__':
+    export_passwords('./passwords.txt')
