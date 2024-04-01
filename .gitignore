@@ -127,3 +127,5 @@ dmypy.json
 .idea/
 
 Spyware/Logger/LOG.txt
+
+Spyware/Screenshots/shots/
