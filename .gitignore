@@ -129,3 +129,5 @@ dmypy.json
 Spyware/Logger/LOG.txt
 
 Spyware/Screenshots/shots/
+
+Spyware/PasswordExporter/passwords.txt
