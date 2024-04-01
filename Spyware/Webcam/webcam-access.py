@@ -1,6 +1,5 @@
 from cv2 import VideoCapture, imwrite, destroyAllWindows
 from cv2.typing import MatLike
-from time import sleep
 
 
 def take_picture(path: str, camera_index) -> bool:
@@ -19,9 +18,6 @@ def save_picture(path: str, frame: MatLike) -> None:
 
 if __name__ == '__main__':
     take_picture('Images/test1.png', 0)
-    sleep(.5)
     take_picture('Images/test2.png', 0)
-    sleep(.5)
     take_picture('Images/test3.png', 0)
-    sleep(.5)
     take_picture('Images/test4.png', 0)
