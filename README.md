@@ -1,4 +1,4 @@
-# KeyLogger-WebcamAccess-Screenshot-BrowserPassword
+# KeyLogger
 
 This repository contains Python projects that I've created as part of the <a href="https://sabzlearn.ir/course/applied-projects-with-python/">Applied projects with python</a> taught by <a href="https://github.com/rezadolati01">Reza Dolati</a>. These projects are educational in nature and designed to demonstrate various Python concepts and applications.
 
